@@ -34,6 +34,7 @@ body {
     background-color: #2b2b2b;
     float: right;
     clear: both;
+    text-align: right;
 }
 
 .bot-message {

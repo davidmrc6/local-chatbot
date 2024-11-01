@@ -58,5 +58,8 @@ npm start
 ```
 Once the server is running, you can open the `src/public/index.html` file in your browser and start chatting!
 Note that, after the first message to the server, the response will take longer than anticipated. All subsequent messages should arrive as expected.
+# Notes from the developer
+The project is still in a pretty early stage, and I will be maintaing and upgrading. There are a few issues I am currently working on, such as the llama runner not being started on start of the server but rather when the user sends his first message (which leads to an awkward silence between the initial message and the initial Llama response). The current history feature implementation also makes message generation a bit slower than I would like it to be.
+
 # Further development
 This simple interface allows for freedom in developing further, more complex, features. There are other endpoints initialized (but never used) for clearing conversation history and getting the conversation history of a session with a `sessionId`. When the user sends a request to the backend server, the request body also contains a `sessionId` field, which is initialized to a default value of `'1'`. This could be used to save message history and allow the user to switch between different converesations.
