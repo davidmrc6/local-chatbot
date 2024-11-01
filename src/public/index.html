@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Chatbot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="main-header"> Simple chatbot </h1>
+        <p class="main-paragraph"> Using a Llama 3 model run locally on a Docker container. </p>
+
+        <div class="chat-container" id="chatContainer">
+            <!-- Message will be inserted here -->
+        </div>
+
+        <div class="form-container">
+            <form id="chatForm">
+                <input type="text" id="userInput" placeholder="Write a message to start chat!" required>
+                <button type="submit" id="submitButton">Send</button>
+            </form>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
