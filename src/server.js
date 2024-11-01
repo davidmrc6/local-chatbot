@@ -131,6 +131,7 @@ app.post('/clear-history', (req, res) => {
     res.json({ message: 'Conversation history cleared' });
 });
 
+
 // Endpoint to get conversation history
 app.get('/history/:sessionId', (req, res) => {
     const { sessionId } = req.params;
@@ -142,10 +143,12 @@ app.get('/history/:sessionId', (req, res) => {
     res.json(conversationStore.get(sessionId));
 });
 
+
 // Health check endpoint
 app.get('/health', (req, res) => {
     res.json({ status: 'ok' });
 });
+
 
 // Start server
 app.listen(PORT, () => {

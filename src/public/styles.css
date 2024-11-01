@@ -1,22 +1,22 @@
 body {
-    background-color: #0d0d0d;
+    background-color: #101010;
     color: white;
+    font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+    font-weight: bold;
 }
 
 .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    font-family: Arial, sans-serif;
     text-align: center;
 }
 
 .chat-container {
     border: 2px solid #ccc;
-    border-radius: 5px;
     padding: 20px;
     margin: 20px 0;
-    height: 400px;
+    height: 500px;
     overflow-y: auto;
 }
 
@@ -39,6 +39,7 @@ body {
 .bot-message {
     float: left;
     clear: both;
+    text-align: left;
 }
 
 .error-message {
@@ -55,31 +56,48 @@ body {
     margin-top: 20px;
 }
 
-input[type="text"] {
-    background-color: #2b2b2b;
-    color: white;
-    width: 300px;
-    padding: 10px;
+.message-box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-right: 10px;
-    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #101010;
 }
 
-button {
-    padding: 10px 20px;
-    background-color: #2b2b2b;
-    color: white;
+.message-input {
+    flex: 1;
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    outline: none;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 4px;
+    border-color: #2b2b2b;
+    background-color: transparent;
+    margin-right: 8px;
+    min-width: 0;
+    color: white;
 }
 
-button:hover {
+.submit-button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #fff;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.submit-button:hover {
     opacity: 0.8;
 }
 
-button:disabled {
+.submit-button:disabled {
     background-color: #cccccc;
     cursor: not-allowed;
 }

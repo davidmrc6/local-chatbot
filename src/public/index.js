@@ -2,13 +2,6 @@ const chatForm = document.getElementById('chatForm');
 const userInput = document.getElementById('userInput');
 const submitButton = document.getElementById('submitButton');
 const chatContainer = document.getElementById('chatContainer');
-const statusDiv = document.getElementById('status');
-
-// Update status
-function updateStatus(message, isError = false) {
-    statusDiv.textContent = message;
-    statusDiv.className = isError ? 'status-error' : 'status-connected';
-}
 
 // Create message
 function addMessage(message, isUser = false, isError = false) {
@@ -17,17 +10,6 @@ function addMessage(message, isUser = false, isError = false) {
     messageDiv.textContent = message;
     return messageDiv;
 }
-
-// Test server connection
-fetch('http://localhost:3000/health')
-    .then(response => response.json())
-    .then(data => {
-        updateStatus('Connected to server');
-    })
-    .catch(error => {
-        updateStatus('Error connecting to server.', true);
-        console.error('Server connection error:', error,);
-    });
 
 chatForm.addEventListener('submit', async (e) => {
     e.preventDefault();
